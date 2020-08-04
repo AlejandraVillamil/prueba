@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="utf-8" />
+        <!-- SEO-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:title" content="Érase una vez" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="./assets/img/bg-masthead.jpg" />
+        <meta property="og:description" content="Disfruta lo dulce de la vida, sin azúcar." />
+        <meta name="description" content="Endulza tu paladar con nuestros deliciosos productos elaborados artesanalmente y sin azúcar. Permite que nuestros sabores acompañen tus momentos especiales para que hagamos parte de tus más preciadas historias. Detrás de cada sabor hay una historia ¿Cuál es la tuya?.">
+        <meta name="author" content="" />
+        <meta name="keywords" content="pastelería, artesanal, sugar free, sin azúcar, saludable, tortas, postres, panadería, pasabocas, estevia, fructosa, panela, eritinol, harina, trigo, avena, coco, garbanzo, lenteja, arroz, maíz, gelatinas, mousses, bajo en grasa, sabores, rellenos, chocolate, banano, zanahoria, decorado, azúcar"/>
+        <title>Érase una vez</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!--ICOMOON-->
+        <link rel="stylesheet" href="css/icomoon/style.css">
+        <!--Conexión a la DB-->
+        <script src="js/app.js"></script>
+        <script src="js/eraseunavez.js"></script>
+        <!--------------Formulario------------>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        
+
+    </head>
+  
+<body id="page-top">
+    <!----------------------------------------------- INICIO MENÚ------------------------------------------------------>
+    <!-- Navigation-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+          
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img class="icono_" style="width:50px; height:50px;" src="assets/img/favicon.png">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="pedido/pedido.html">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----------------------------------------------- FIN MENÚ------------------------------------------------------>
+
+
+
+    <!-----------------------------------------INICIO INTRODUCCIÓN------------------------------------------------------>
+    <!-- Masthead-->
+    <header class="masthead">
+
+
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">Érase una vez</h1>
+                        <hr class="divider div_ini" />
+                        <h3 class="text-white mt-0 letter_space">Pastelería</h3>
+                        <br>
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="slogan font-weight-light mb-5">Disfruta lo dulce de la vida, sin azúcar.</p>
+                        <a class="btn btn-primary1 btn-xl js-scroll-trigger" href="#about">Dar un vistazo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--------------------------------------------FIN INTRODUCCIÓN------------------------------------------------------>
+
+
+    <!--------------------------------------------INICIO NOSOTROS------------------------------------------------------>
+
+        <!-- About-->
+        <section class="page-section bg-primary1" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Pastelería saludable</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4">Nos dedicamos a la elaboración de productos de pastelería artesanal , que se destacan por ser saludables y no contener azúcar adicionada. 
+                            </p>
+
+                            <p class="text-white-50 mb-4">Nuestro objetivo es proporcionar opciones de repostería saludable a quiénes que por su estilo de vida o por condiciones de salud deben excluir de 
+                                su dieta el azúcar y/o disminuir el consumo de carbohidratos.</p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Continuar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------FIN NOSOTROS------------------------------------------------------>
+
+    <!--------------------------------------------INICIO SERVICIOS------------------------------------------------->
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <h2 class="text-center mt-0">Productos</h2>
+                <hr class="divider my-4" />
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <img src="assets/img/Pastel.png" alt="De sabores tradicionales"/>
+                            <br>
+                            <br>
+                            <h3 class="h4 mb-2">Tortas</h3>
+                            <p class="text-muted mb-0">Sabores tradicionales como banano, chocolate y zanahoria.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <img src="assets/img/Cupcake.png" alt="De rellenos especiales"/>
+                            <br>
+                            <br>
+                            <h3 class="h4 mb-2">Cupcakes</h3>
+                            <p class="text-muted mb-0">Ponquecitos personales con rellenos especiales.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <img src="assets/img/Pan.png" alt="Elaborados sin harina de trigo"/>
+                            <br>
+                            <br>
+                            <h3 class="h4 mb-2">Panadería</h3>
+                            <p class="text-muted mb-0">Productos elaborados sin harina de trigo.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <img src="assets/img/Gelatina.png" alt="Estan bajos en grasa"/>
+                            <br>
+                            <br>
+                            <h3 class="h4 mb-2">Postres</h3>
+                            <p class="text-muted mb-0">Gelatinas y mousses bajos en grasa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------INICIO SERVICIOS------------------------------------------------->
+
+
+    <!--------------------------------------------INICIO PRODUCTOS------------------------------------------------->
+
+    <!-- Portfolio-->
+    <div id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/fresco.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/fresco.jpg" alt="productos frescos elaborados sobre pedido" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Fresco<br></div>
+                            <div class="project-name">Elaboramos nuestros productos sobre pedido.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/natural.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/natural.jpg" alt="recetas con productos naturales sin conservantes" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Natural<br></div>
+                            <div class="project-name">Nuestros productos no tienen conservantes.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/endulzantes.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/endulzantes.jpg" alt="endulzamos con estevia fructosa panela eritinol" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Endulzantes<br></div>
+                            <div class="project-name">Manejamos distintos tipos de endulzantes.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/personalizable.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/personalizable.jpg" alt="Puedes seleccionar el nivel de azucar "  />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Personalizado<br></div>
+                            <div class="project-name">Tu seleccionas el nivel de dulce.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/variados.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/variados.jpg" alt="Horneamos con distintos tipos de harinas como avena, coco, garbanzo, lenteja, arroz, maiz (aptas para celiacos)" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Variado<br></div>
+                            <div class="project-name">Usamos diferentes harinas, bajas en carbohidratos.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/para_todos.jpg">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/para_todos.jpg" alt="También tenemos opciones para diabéticos, hipoglucemicos, celíacos e inclusive para quíenes si consumen azúcar" />
+                        <div class="portfolio-box-caption p-3">
+                            <div class="project-category text-white-50">Para Todos<br></div>
+                            <div class="project-name">También tenemos opciones para diabéticos, hipoglucemicos, celíacos e inclusive para quíenes si consumen azúcar.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------FIN PRODUCTOS------------------------------------------------->
+
+
+    <!--------------------------------------------INICIO PEDIDOS------------------------------------------------->
+
+    <!-- Call to action-->
+    <div id="pedido">
+    <section class="page-section bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Realiza tu orden</h2>
+            <a class="btn btn-light btn-xl" href="./pedido/pedido.html">Pedido</a>
+        </div>
+    </section>
+    </div> 
+    <!--------------------------------------------FIN PEDIDOS------------------------------------------------->
+
+    <!--------------------------------------------INICIO CONTACTO------------------------------------------------->
+    
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Contáctanos</h2>
+                    <hr class="divider my-4">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-lg-6 pb-5">
+    
+                                <form action="mail.php" method="post">
+                                    <div class="card-body p-3">
+            
+                                        <div class="form-group">
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-user text-info1"></i></div>
+                                                </div>
+                                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-envelope text-info1"></i></div>
+                                                </div>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-comment text-info1"></i></div>
+                                                </div>
+                                                <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Envianos tu Mensaje" required></textarea>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <input type="submit" value="Enviar" class="btn btn-secondary btn-block rounded-0 py-2">
+                                        </div>
+                                    </div>
+                                </form>
+                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted mb-5">Síguenos en:</p>
+
+                </div>
+            </div>
+            <div class="icomoon">
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="icon-youtube"></i>
+                    <a class="d-block vinculo" href="https://www.youtube.com/channel/UCA_R9ljlrOQjfb5FakbZPmw">YouTube</a>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="icon-instagram"></i>
+                    <a class="d-block vinculo" href="https://www.instagram.com/eraseunavez_pasteleria/">Instagram</a>   
+                </div>  
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="icon-facebook"></i>
+                    <a class="d-block vinculo" href="https://www.facebook.com/eraseunavezpasteleria/">Facebook</a>
+                </div>
+            </div>     
+            <div class="icomoon2">    
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="icon-twitter"></i>
+                    <a class="d-block vinculo" href="https://twitter.com/EuvPasteleria">Twitter</a>
+                </div>
+                <div class="col-lg-4 mr-auto text-center  mb-5 mb-lg-0">
+                    <i class="icon-whatsapp"></i>
+                    <a class="d-block vinculo" href="https://wa.me/573186060384?text=Hola%2C+estoy+interesad%40+en+tus+productos">WhatsApp</a>   
+                </div>   
+            </div>    
+        </div>
+    </section>
+    <!--------------------------------------------FIN CONTACTO------------------------------------------------->
+    
+    <!--------------------------------------------INICIO FOOTER------------------------------------------------->
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">
+                <a class="vinculo" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Esta obra está bajo una licencia de
+                    Creative Commons Reconocimiento 4.0 Internacional.
+                </a>
+            </div>
+            <a style="text-align: center;" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <div class="text-center">
+                    <img width="20" height="20" src="assets/img/cc.png" />
+                    <img width="20" height="20" src="assets/img/cc2.png" />
+                </div>
+        </div>
+    </footer>
+    <!--------------------------------------------INICIO FOOTER------------------------------------------------->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

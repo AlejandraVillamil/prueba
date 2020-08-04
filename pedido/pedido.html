@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="utf-8" />
+        <!-- SEO-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:title" content="Érase una vez" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="./assets/img/bg-masthead.jpg" />
+        <meta property="og:description" content="Disfruta lo dulce de la vida, sin azúcar." />
+        <meta name="description" content="Endulza tu paladar con nuestros deliciosos productos elaborados artesanalmente y sin azúcar. Permite que nuestros sabores acompañen tus momentos especiales para que hagamos parte de tus más preciadas historias. Detrás de cada sabor hay una historia ¿Cuál es la tuya?.">
+        <meta name="author" content="" />
+        <meta name="keywords" content="pastelería, artesanal, sugar free, sin azúcar, saludable, tortas, postres, panadería, pasabocas, estevia, fructosa, panela, eritinol, harina, trigo, avena, coco, garbanzo, lenteja, arroz, maíz, gelatinas, mousses, bajo en grasa, sabores, rellenos, chocolate, banano, zanahoria, decorado, azúcar"/>
+        <title>Pedidos</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <!--ICOMOON-->
+        <link rel="stylesheet" href="../css/icomoon/style.css">
+        <!--Conexión a la DB-->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/eraseunavez.js"></script>
+        <!--Firebase-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        <script type="text/javascript" src="https://checkout.epayco.co/checkout.js">   </script>
+
+    </head>
+
+    <section class="page-section bg-primary" id="about"style="padding:3rem;"></section>
+
+         <!----------------------------------------------- INICIO MENÚ------------------------------------------------------>
+         <body id="page-top"onload="loadProduct()">
+         <!-- Navigation-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+          
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img class="icono_" style="width:50px; height:50px;" src="../assets/img/favicon.png">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#services">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#portfolio">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----------------------------------------------- FIN MENÚ------------------------------------------------------>
+
+    <!--------------------------------------------INICIO COMPRAS------------------------------------------------->
+
+        <div class="container" style="max-width:100%">
+            <div class="row" style="text-align:center;">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-9 row" style="padding-top::3rem"></main>
+                <!-- Carrito -->
+                <aside class="col" style="padding-top:10em margin-left:0px; background-color:lightgray;">
+                    <h2 style="padding-top:4rem">Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group" style="padding-top::3rem"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span> COP</p>
+                    <div class=”row”>
+                        <div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> 
+                    <button id="boton-vaciar" class="btn btn-secondary btn-lg active">Vaciar</button>
+                </div>             
+                   <div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> 
+                       <form  action="https://checkout.wompi.co/p/" method="GET" onclick="checkout()" >
+                         <!-- OBLIGATORIOS -->
+                        <input type="hidden" name="public-key" value="pub_test_zltBr0WE6CliEf0F73lgDeAgkPZu4QPC" />
+                        <input type="hidden" name="currency" value="COP" />
+                        <input type="hidden"  name="amount-in-cents" value=''/>
+                        <input type="hidden" name="reference" value="ahkjfhdgsiughrA321" />
+                        <!-- OPCIONALES -->
+                        <input type="hidden" name="redirect-url" value="file:///C:/Users/akale/Desktop/eraseunavezpasteleria/pedido/pedido.html" />
+                        <button type="btn btn-secondary btn-lg active"style="background-color: #162238; color:white; padding: 0.5rem 1rem;
+                        font-size: 1.25rem;
+                        line-height: 1.5;
+                        border-radius: 0.3rem;">Pagar</button>
+                                          
+                     </form>
+                    </div> 
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+  
+    </div>
+
+    <!--------------------------------------------FIN PEDIDO------------------------------------------------->
+
+    <!--------------------------------------------FIN COMPRAS------------------------------------------------->
+
+    <!--------------------------------------------INICIO FOOTER------------------------------------------------->
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Esta obra está bajo una licencia de
+                    Creative Commons Reconocimiento 4.0 Internacional.
+                </a>
+            </div>
+            <a style="text-align: center;" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <div class="text-center">
+                    <img width="20" height="20" src="../assets/img/cc.png" />
+                    <img width="20" height="20" src="../assets/img/cc2.png" />
+                </div>
+        </div>
+    </footer>
+    <!--------------------------------------------INICIO FOOTER------------------------------------------------->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
